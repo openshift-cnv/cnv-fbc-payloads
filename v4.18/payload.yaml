@@ -1,0 +1,6 @@
+index_image: ${index_image}
+from_index: ${from_index}
+fbc_fragment: ${fbc_fragment}
+image_sha: ${image_sha}
+channel: ${channel}
+hco_bundle_version: ${hco_bundle_version}
