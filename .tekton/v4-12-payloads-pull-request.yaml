@@ -30,7 +30,7 @@ spec:
   - name: dockerfile
     value: Containerfile
   - name: path-context
-    value: v4-12/lanes/candidate/build
+    value: v4-12/lanes/candidate
   pipelineSpec:
     description: |
       This pipeline is ideal for building container images from a Containerfile while reducing network traffic.
