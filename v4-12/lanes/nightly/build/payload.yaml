@@ -1,5 +1,5 @@
 index_image: registry-proxy.engineering.redhat.com/rh-osbs/iib:911932
-snapshot_id: cnv-fbc-v4-12-vvrb4
+snapshot_id: cnv-fbc-v4-12-gpwk4
 from_index: registry-proxy.engineering.redhat.com/rh-osbs/iib-pub-pending:v4.12
 fbc_fragment: quay.io/redhat-user-workloads/cnv-fbc-tenant/cnv-fbc-v4-12/v412-cnv-fbc@sha256:60b4f956e7660b13062fc45cb19cb86939bd2fcf10fb1dc510ecc3ca39d82c0c
 channel: nightly
