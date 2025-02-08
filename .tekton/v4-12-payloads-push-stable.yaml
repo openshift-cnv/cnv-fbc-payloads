@@ -6,7 +6,7 @@ metadata:
     build.appstudio.redhat.com/commit_sha: '{{revision}}'
     build.appstudio.redhat.com/target_branch: '{{target_branch}}'
     pipelinesascode.tekton.dev/max-keep-runs: "3"
-    pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch == "main" && ( "v4-12/lanes/candidate/build/payload.yaml".pathChanged() || ".tekton/v4-12-payloads-pull-request.yaml".pathChanged())
+    pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch == "main" && ( "v4-12/lanes/candidate/build/payload.yaml".pathChanged() || ".tekton/v4-12-payloads-push-stable.yaml".pathChanged())
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: cnv-fbc-v4-12
@@ -21,11 +21,11 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/cnv-fbc-tenant/v4-12-payloads:v4-12-{{revision}}
+    value: quay.io/redhat-user-workloads/cnv-fbc-tenant/v4-12-payloads:v4-12-stable-{{revision}}
   - name: dockerfile
     value: Containerfile
   - name: path-context
-    value: v4-12/lanes/candidate
+    value: v4-12/lanes/stable
   pipelineSpec:
     description: |
       This pipeline is ideal for building container images from a Containerfile while reducing network traffic.
