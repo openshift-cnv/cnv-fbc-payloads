@@ -21,7 +21,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/cnv-fbc-tenant/v4-12-payload-candidate:v4-12-candidate-{{revision}}
+    value: quay.io/redhat-user-workloads/cnv-fbc-tenant/v4-12-payload-candidate:v4-12-candidate.{{revision}}
   - name: dockerfile
     value: Containerfile
   - name: path-context
