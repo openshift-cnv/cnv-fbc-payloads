@@ -1,0 +1,60 @@
+FROM registry.access.redhat.com/ubi9:9.5-1738814488 as builder
+
+WORKDIR /tmp
+
+USER root
+
+ADD https://mirror.openshift.com/pub/openshift-v4/clients/helm/latest/helm-linux-amd64.tar.gz .
+ADD https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/openshift-client-linux.tar.gz .
+ADD https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 .
+ADD https://mirror.openshift.com/pub/openshift-v4/clients/pipeline/latest/tkn-linux-amd64.tar.gz .
+ADD https://github.com/jqlang/jq/releases/latest/download/jq-linux-amd64 .
+ADD https://mirror.openshift.com/pub/rhacs/assets/latest/bin/Linux/roxctl .
+ADD https://github.com/akuity/kargo/releases/latest/download/kargo-linux-amd64 .
+
+RUN tar xvf helm-linux-amd64.tar.gz --no-same-owner && \
+    tar xvf openshift-client-linux.tar.gz --no-same-owner && \
+    tar xvf tkn-linux-amd64.tar.gz --no-same-owner && \
+    rm -f *.tar.gz install-man-page.sh README.md LICENSE && \
+    mv helm-linux-amd64 helm && \
+    mv yq_linux_amd64 yq && \
+    mv jq-linux-amd64 jq && \
+    mv kargo-linux-amd64 kargo && \
+    chmod +x yq && \
+    chmod +x roxctl && \
+    chmod +x kargo && \
+    chmod +x jq
+
+
+FROM registry.access.redhat.com/ubi9:9.5-1738814488
+
+WORKDIR /home
+
+USER root
+
+COPY --from=builder --chown=1001:0 /tmp /usr/local/bin
+# Copy Binarys to /usr/local/bin 
+RUN dnf update -y && \
+    dnf install git wget -y && \
+    dnf clean all && \
+    useradd git -m --home-dir /home/git --gid 0 -s /bin/bash --uid 1000 && \
+    mkdir /home/git/.docker && touch /home/git/.gitconfig && touch /home/git/.git-credentials && \
+    chown -R 1000:0  /home/git && \
+    chmod -R 0775 /home/git && \
+    PATH=$(echo $PATH:/home) && \
+    echo $PATH && \
+    mkdir /payload && \
+    chown 1001:0 /payload
+
+# Copy payload data to ContainerImage    
+COPY ./build /payload
+
+
+
+LABEL TOOLS="HELM, oc kubectl, yq, tkn, git, jq, roxctl, kargo"
+LABEL PAYLOAD="v4.12 post release metadata"
+
+
+
+USER 1001
+CMD cat /payload/payload.yaml
