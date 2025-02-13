@@ -1,12 +1,12 @@
-index_image: registry-proxy.engineering.redhat.com/rh-osbs/iib:909104
-snapshot_id: cnv-fbc-v4-12-7qs6x
+index_image: registry-proxy.engineering.redhat.com/rh-osbs/iib:915757
+snapshot_id: cnv-fbc-v4-12-7fjdl
 from_index: registry-proxy.engineering.redhat.com/rh-osbs/iib-pub-pending:v4.12
-fbc_fragment: quay.io/redhat-user-workloads/cnv-fbc-tenant/cnv-fbc-v4-12/v412-cnv-fbc@sha256:997c93363b0e6f75886bb8e51ed9b83cf7de5a7d8a02ce58f390af2098f78e3f
-channel: candidate
+fbc_fragment: quay.io/redhat-user-workloads/cnv-fbc-tenant/cnv-fbc-v4-12/v412-cnv-fbc@sha256:b487e587d5151b9829609de1d4d6b6e5e7714e5f50c5935d6f0d770ee0b9b104
+channel: stable
 hco_bundle_registry_by_sha: registry.redhat.io/container-native-virtualization/hco-bundle-registry@sha256:f4d70cadbedf066104b505ee2a93e065ac1832be7a5de33b050896c5d335bbef
 hco_bundle_registry_by_tag: registry.redhat.io/container-native-virtualization/hco-bundle-registry:v4.12.17-9
 hco_bundle_version: v4.12.17-9
 version: null
 releasePlan: null
-#######
-#### this is the last test for today, stable
+freightName: null
+freightID: null
