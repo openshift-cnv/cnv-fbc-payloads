@@ -7,7 +7,7 @@ hco_bundle_registry_by_sha: registry.redhat.io/container-native-virtualization/h
 hco_bundle_registry_by_tag: registry.redhat.io/container-native-virtualization/hco-bundle-registry:v4.12.17-32
 hco_bundle_version: v4.12.17-32
 minorVersion: v4.12.17
-version: null
+version: v4-12
 releasePlan: null
 freightName: null
 freightID: null
