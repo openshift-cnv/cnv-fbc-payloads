@@ -6,9 +6,9 @@ channel: stable
 hco_bundle_registry_by_sha: registry.redhat.io/container-native-virtualization/hco-bundle-registry@sha256:bbe67cbd74cdcfb11e80a673d30d70dacf8c873ef584139b5d91e300bb1175de
 hco_bundle_registry_by_tag: registry.redhat.io/container-native-virtualization/hco-bundle-registry:4.12.17-24
 hco_bundle_version: v4.12.17-24
-version: v4-12
-releasePlan: stage
+version: null
+releasePlan: null
 freightName: null
 freightID: null
 minorVersion: v4.12.17
-############
+
