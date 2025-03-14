@@ -1,11 +1,11 @@
-index_image: registry-proxy.engineering.redhat.com/rh-osbs/iib:935780
-snapshot_id: cnv-fbc-v4-14-8rfhp
+index_image: registry-proxy.engineering.redhat.com/rh-osbs/iib:937835
+snapshot_id: cnv-fbc-v4-14-6rpds
 from_index: registry-proxy.engineering.redhat.com/rh-osbs/iib-pub-pending:v4.14
-fbc_fragment: quay.io/redhat-user-workloads/cnv-fbc-tenant/cnv-fbc-v4-14/v414-cnv-fbc-pvfh@sha256:dbfe6b62e77fc9e5d85e139eb380bfd25a0bd39082743cfa80c68e45fcac3750
+fbc_fragment: quay.io/redhat-user-workloads/cnv-fbc-tenant/cnv-fbc-v4-14/v414-cnv-fbc-pvfh@sha256:fe36465096a0bc81cef702f3b35020ac152ce0866d92470a8c2fbf7f6fc06698
 channel: stable
-hco_bundle_registry_by_sha: registry.redhat.io/container-native-virtualization/hco-bundle-registry-rhel9@sha256:d3171b2b4e3c6181dc8c06b10d1bf240c2bc91b876dbb962331a13cddd0c3c63
-hco_bundle_registry_by_tag: registry.redhat.io/container-native-virtualization/hco-bundle-registry-rhel9:v4.14.12.rhel9-13
-hco_bundle_version: v4.14.12.rhel9-13
+hco_bundle_registry_by_sha: registry.redhat.io/container-native-virtualization/hco-bundle-registry-rhel9@sha256:603cc45e75d04391482d21bdca9c996cb5d16356d9b359868c0ff4fc33e1c9aa
+hco_bundle_registry_by_tag: registry.redhat.io/container-native-virtualization/hco-bundle-registry-rhel9:v4.14.12.rhel9-15
+hco_bundle_version: v4.14.12.rhel9-15
 minorVersion: v4.14.12.rhel9
 version: null
 releasePlan: null
