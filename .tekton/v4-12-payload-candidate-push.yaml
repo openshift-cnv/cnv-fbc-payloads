@@ -6,7 +6,8 @@ metadata:
     build.appstudio.redhat.com/commit_sha: '{{revision}}'
     build.appstudio.redhat.com/target_branch: '{{target_branch}}'
     pipelinesascode.tekton.dev/max-keep-runs: "3"
-    pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch == "main" && ( "v4-12/lanes/candidate/build/payload.yaml".pathChanged() || ".tekton/v4-12-payload-candidate-push.yaml".pathChanged())
+    pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch
+      == "main" && ( "v4-12/lanes/candidate/build/payload.yaml".pathChanged() || ".tekton/v4-12-payload-candidate-push.yaml".pathChanged())
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: fbc-payloads
@@ -595,7 +596,8 @@ spec:
       optional: true
     - name: netrc
       optional: true
-  taskRunTemplate: {}
+  taskRunTemplate:
+    serviceAccountName: build-pipeline-v4-12-payload-candidate
   workspaces:
   - name: workspace
     volumeClaimTemplate:
