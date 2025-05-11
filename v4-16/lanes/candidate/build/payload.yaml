@@ -1,0 +1,15 @@
+index_image: registry-proxy.engineering.redhat.com/rh-osbs/iib:968703
+snapshot_id: cnv-fbc-v4-16-zxrc2
+from_index: registry-proxy.engineering.redhat.com/rh-osbs/iib-pub-pending:v4.16
+fbc_fragment: quay.io/redhat-user-workloads/cnv-fbc-tenant/cnv-fbc-v4-16/v416-cnv-fbc@sha256:2ee409324259a25688eb5cb51aa366f81a45004c79b61fcdacc4bd81b8f764db
+channel: candidate
+hco_bundle_registry_by_sha: registry.redhat.io/container-native-virtualization/hco-bundle-registry-rhel9@sha256:eb4d26935d5db146889d3bd8bf682014ab8db40e8c0435aab835239cb4425564
+hco_bundle_registry_by_tag: registry.redhat.io/container-native-virtualization/hco-bundle-registry-rhel9:v4.16.8.rhel9-13
+hco_bundle_version: v4.16.8.rhel9-13
+minorVersion: v4.16.8.rhel9
+version: null
+releasePlan: null
+freightName: null
+freightID: null
+prNumber: null
+firstRelease: false
